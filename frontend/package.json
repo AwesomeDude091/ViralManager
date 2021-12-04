@@ -1,0 +1,19 @@
+{
+  "name": "website",
+  "version": "1.0.0 SNAPSHOT",
+  "description": "Help me",
+  "main": "index.js",
+  "repository": "https://www.github.com",
+  "author": "asdf",
+  "license": "true",
+  "private": true,
+  "dependencies": {
+    "css": "^3.0.0",
+    "html": "^1.0.0",
+    "node.js": "^0.0.1-security",
+    "sass": "^1.44.0",
+    "typescript": "^4.5.2",
+    "vue": "^2.6.14",
+    "webpack": "^5.64.4"
+  }
+}

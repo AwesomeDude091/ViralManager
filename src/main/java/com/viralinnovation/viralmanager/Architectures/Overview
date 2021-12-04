@@ -1,0 +1,21 @@
+Architecture Types:
+1. Daemon
+2. JVM
+3. Python
+4. Docker
+5. Shell/Bash
+6. Kubernetes
+
+   more possibilities
+
+Architecture needs:
+    in/out stream
+    Port
+    Start/Stop
+    Restart
+    *dependency resolution (universal)*
+
+other:
+
+    Services = basic (extendable with plugins)
+    include additions (extend base functionality of website) in services
