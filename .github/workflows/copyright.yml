@@ -1,0 +1,31 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Copyright Addition
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  - pull_request
+  - push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    # Checking out the repository which is to be actioned
+    - uses: actions/checkout@v2
+    # Implementing action on repository
+    - uses: VinnyBabuManjaly/copyright-action@v1.0.0
+      with:
+        CopyrightString: 'Copyright (c) 2021 Viral Innovation'
+        FileType: '.java, .txt, .vue'
+        Path: ''
+        IgnorePath: ''
+    # Creates pull request with all changes in file
+    - name: pull-request-action
+      uses: vsoch/pull-request-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH_PREFIX: ${GITHUB_REF##*/}
+        PULL_REQUEST_BRANCH: "master"
+
+
