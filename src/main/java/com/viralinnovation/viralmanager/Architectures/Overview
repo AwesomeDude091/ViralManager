@@ -1,10 +1,9 @@
 Architecture Types:
-1. Daemon
-2. JVM
-3. Python
+1. Daemon (Interaction through Process)
+2. JVM (Process)
+3. Python (Process)
 4. Docker
-5. Shell/Bash
-6. Kubernetes
+5. Shell/Bash (Interaction through Process)
 
    more possibilities
 
