@@ -40,6 +40,7 @@ public final class ViralFileUtils {
     }
     
     public static @NotNull String generateOSBasedClassPath(@NotNull String currentPath, List<String> toBeAdded){
+        // Adds OS Based divider into Path, iterating through List
         String returnString = currentPath;
         if(currentPath.contains("\\")) {
             for(String string: toBeAdded) {
