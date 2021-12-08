@@ -38,6 +38,22 @@ public final class ViralFileUtils {
             return currentPath + "/" + toBeAdded;
         }
     }
+    
+    public static @NotNull String generateOSBasedClassPath(@NotNull String currentPath, List<String> toBeAdded){
+        // Adds OS Based divider into Path, iterating through List
+        String returnString = currentPath;
+        if(currentPath.contains("\\")) {
+            for(String string: toBeAdded) {
+                returnString = retrunString + "\\" + string;
+            }
+            return returnString;
+        } else {
+            for(String string: toBeAdded) {
+                returnString = retrunString + "/" + string;
+            }
+            return returnString;
+        }
+    }
 
     public static @Nullable File findJavaDirectory(int javaVersion){
         File javaDirectory;
