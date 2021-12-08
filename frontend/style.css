@@ -340,6 +340,19 @@
   border-radius: 20px;
 }
 
+.terminal ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.terminal ::-webkit-scrollbar-track {
+  box-shadow: insert 0 0 5px grey;
+  border-radius: 5px;
+}
+
+.terminal ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
 .line{
   display: table;
   width: 100%;
@@ -356,6 +369,7 @@
   border: none;
   background: black;
   color: white;
+  font-size: 15px;
   outline: none;
 }
 .submit{
