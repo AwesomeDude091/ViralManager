@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Admin Site</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+   <div class="sidebar">
+    <div class="logo-details">
+      <img class="icon" src="Assets/Viral Innovation Logo BIG.png" alt="logo">
+        <div class="logo_name">A-Console</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="index.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+       <a href="Default-server-Template.html">
+         <i class='bx bx-server' ></i>
+         <span class="links_name">Physical Servers</span>
+       </a>
+       <span class="tooltip">Physical Servers</span>
+     </li>
+     <li>
+       <a href="Default-virtual-Template.html">
+         <i class='bx bx-cloud' ></i>
+         <span class="links_name">Virtual Servers</span>
+       </a>
+       <span class="tooltip">Virtual Servers</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Analytics</span>
+       </a>
+       <span class="tooltip">Analytics</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-plug' ></i>
+         <span class="links_name">Plugins</span>
+       </a>
+       <span class="tooltip">Plugins</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">User Settings</span>
+       </a>
+       <span class="tooltip">User Settings</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Settings</span>
+       </a>
+       <span class="tooltip">Settings</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="Assets/placeholder.jpeg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">AwesomeDude</div>
+             <div class="job">Admin</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+   </div>
+  <section class="home-section">
+      <div class="text">Virtual Server Creation</div>
+      <div class="content">
+          <div class="Nav-bar-content">
+              <a class="tab">Creation</a>
+          </div>
+          <center>
+              <div class="creation-content">
+                  <h1>God pain</h1>
+                  <h4>Name of Server</h4>
+                  <input type="text" id="name input" name="name">
+                  <br>
+                  <br>
+                  <h4>Server Type</h4>
+                  <input type="radio" id="radio1" name="selector1">
+                  <label for="radio1">Paper</label>
+                  <br>
+                  <input type="radio" id="radio2" name="selector1">
+                  <label for="radio2">Magma</label>
+                  <br>
+                  <input type="radio" id="radio3" name="selector1">
+                  <label for="radio3">Forge</label>
+                  <br>
+                  <input type="radio" id="radio4" name="selector1">
+                  <label for="radio4">Waterfall</label>
+                  <br>
+                  <br>
+                  <h4>Discord ID</h4>
+                  <input type="text" id="discord id input" name="name">
+                  <br>
+                  <br>
+                  <h4>Discord Console ID</h4>
+                  <input type="text" id="discord console id input" name="name">
+                  <br>
+                  <br>
+                  <h4>Plug-ins Preset</h4>
+                  <input type="radio" id="radio5" name="selector1">
+                  <label for="radio5">Survival (nogrief)</label>
+                  <br>
+                  <input type="radio" id="radio6" name="selector1">
+                  <label for="radio6">Survival (grief)</label>
+                  <br>
+                  <input type="radio" id="radio7" name="selector1">
+                  <label for="radio7">Minigame (pvp)</label>
+                  <br>
+                  <input type="radio" id="radio8" name="selector1">
+                  <label for="radio8">Minigame (nopvp)</label>
+                  <br>
+                  <input type="radio" id="radio9" name="selector1">
+                  <label for="radio9">Default</label>
+                  <br>
+                  <br>
+                  <br>
+                  <button type="submit" id="submit" class="submit">Create</button>
+              </div>
+          </center>
+      </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
