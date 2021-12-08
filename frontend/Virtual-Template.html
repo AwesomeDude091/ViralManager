@@ -2,12 +2,38 @@
 <html lang="en">
 <head>
     <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript">google.load("jquery", "1.3.2");</script>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <title>Admin Site</title>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        $(function() {
+        $('.terminal').on('click', function() {
+        $('#input').focus();
+        });
+
+        $('#input').on('keydown', function search(e) {
+        if (e.keyCode == 13) {
+        // append your output to the history,
+        // here I just append the input
+        $('#history').append($(this).val() + '<br/>');
+
+        // you can change the path if you want
+        // crappy implementation here, but you get the idea
+        if ($(this).val().substring(0, 3) === 'cd ') {
+        $('#path').html($(this).val().substring(3) + '&nbsp;>&nbsp;');
+        }
+
+        // clear the input
+        $('#input').val('');
+
+        }
+        });
+        });
+    </script>
 </head>
 <body>
    <div class="sidebar">
@@ -25,14 +51,14 @@
          <span class="tooltip">Dashboard</span>
       </li>
       <li>
-       <a href="#">
+       <a href="Default-server-Template.html">
          <i class='bx bx-server' ></i>
          <span class="links_name">Physical Servers</span>
        </a>
        <span class="tooltip">Physical Servers</span>
      </li>
      <li>
-       <a href="#">
+       <a href="Default-virtual-Template.html">
          <i class='bx bx-cloud' ></i>
          <span class="links_name">Virtual Servers</span>
        </a>
@@ -93,6 +119,14 @@
           </div>
           <div class="actual-content">
               <h1>Terminal cancer</h1>
+              <div class="terminal">
+                  <div id="history">
+                  </div>
+                  <div class="line">
+                      <span id="path">>&nbsp;</span>
+                      <input type="text" id="input">
+                  </div>
+              </div>
           </div>
           <div class="actual-content">
               <h1>Files pain</h1>
