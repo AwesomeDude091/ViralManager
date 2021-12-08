@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Admin Site</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+   <div class="sidebar">
+    <div class="logo-details">
+      <img class="icon" src="Assets/Viral Innovation Logo BIG.png" alt="logo">
+        <div class="logo_name">A-Console</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="index.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+       <a href="Default-server-Template.html">
+         <i class='bx bx-server' ></i>
+         <span class="links_name">Physical Servers</span>
+       </a>
+       <span class="tooltip">Physical Servers</span>
+     </li>
+     <li>
+       <a href="Default-virtual-Template.html">
+         <i class='bx bx-cloud' ></i>
+         <span class="links_name">Virtual Servers</span>
+       </a>
+       <span class="tooltip">Virtual Servers</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Analytics</span>
+       </a>
+       <span class="tooltip">Analytics</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-plug' ></i>
+         <span class="links_name">Plugins</span>
+       </a>
+       <span class="tooltip">Plugins</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">User Settings</span>
+       </a>
+       <span class="tooltip">User Settings</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Settings</span>
+       </a>
+       <span class="tooltip">Settings</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="Assets/placeholder.jpeg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">AwesomeDude</div>
+             <div class="job">Admin</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+   </div>
+  <section class="home-section">
+      <div class="text">Virtual servers</div>
+      <div class="pain-container">
+          <a href="Virtual-addition-Template.html">
+            <div class="pain-content">
+                <p>Add Server</p>
+                <img src="Assets/greenplus.png">
+            </div>
+          </a>
+          <a href="Virtual-Template.html">
+            <div class="pain-content">
+                <p>Paper Server</p>
+                <img src="Assets/paper.png">
+            </div>
+          </a>
+          <a href="Virtual-Template.html">
+            <div class="pain-content">
+                <p>Magma Server</p>
+                <img src="Assets/magma.png">
+            </div>
+          </a>
+          <a href="Virtual-Template.html">
+            <div class="pain-content">
+                <p>Forge Server</p>
+                <img src="Assets/forge.jpeg">
+            </div>
+          </a>
+          <a href="Virtual-Template.html">
+            <div class="pain-content">
+                <p>Waterfall</p>
+                <img src="Assets/waterfallplaceholder.png">
+            </div>
+          </a>
+      </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
