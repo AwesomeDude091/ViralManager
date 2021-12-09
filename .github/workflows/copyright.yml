@@ -16,8 +16,8 @@ jobs:
     - name: Add Copyright
       run: |
         chmod a+x "/home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh"
-        find "/home/runner/work/ViralManager/ViralManager" -type d -name "/home/runner/work/ViralManager/ViralManager/frontend/node_modules" -prune -o -name "*.js" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh
-        find "/home/runner/work/ViralManager/ViralManager" -type d -name "/home/runner/work/ViralManager/ViralManager/src/test" -prune -o -name "*.java" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh
+        find "/home/runner/work/ViralManager/ViralManager" -type d -name "frontend/node_modules" -prune -o -name "*.js" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh
+        find "/home/runner/work/ViralManager/ViralManager" -type d -name "src/test" -prune -o -name "*.java" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh
     # Checking out the repository which is to be actioned
     # - uses: actions/checkout@v2
     # Implementing action on repository
@@ -33,7 +33,7 @@ jobs:
       with:
         title: '${GITHUB_REF##*/} Added Copyright'
         commit-message: Added Copyrght
-        branch: actions-copyright/${GITHUB_REF##*/}
+        branch: actions/copyright
         committer: GitHub <noreply@github.com>
         author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
         signoff: false
