@@ -35,8 +35,8 @@ jobs:
         commit-message: Added Copyrght
         branch: actions-copyright/${GITHUB_REF##*/}
         committer: GitHub <noreply@github.com>
-          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          signoff: false
+        author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+        signoff: false
         # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # BRANCH_PREFIX: ${GITHUB_REF##*/}
         # PULL_REQUEST_BRANCH: "main"
