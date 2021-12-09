@@ -31,7 +31,7 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
       with:
-        title: '${GITHUB_REF##*/} Added Copyright'
+        title: '[Actions] Added Copyright'
         commit-message: Added Copyrght
         branch: actions/copyright
         committer: GitHub <noreply@github.com>
