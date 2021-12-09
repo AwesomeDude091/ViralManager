@@ -11,10 +11,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout
+    - name: Checkout
       uses: actions/checkout@v2
     - name: Add COPYRIGHT
-      run: find "" -type d -name "frontend/node_modules" -prune -o -name "*.js" -print0 | xargs -0 .github/workflows/addcopyright.sh
+      run: find "/home/runner/work/ViralManager/ViralManager" -type d -name "/home/runner/work/ViralManager/ViralManager/frontend/node_modules" -prune -o -name "*.js" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh
     # Checking out the repository which is to be actioned
     # - uses: actions/checkout@v2
     # Implementing action on repository
