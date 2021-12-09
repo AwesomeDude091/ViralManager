@@ -1,3 +1,5 @@
+ /* Copyright © Viral Innovation - All Rights Reserved */
+
 'use strict'
 const sidebar = document.querySelector('.sidebar')
 const closeBtn = document.querySelector('#btn')

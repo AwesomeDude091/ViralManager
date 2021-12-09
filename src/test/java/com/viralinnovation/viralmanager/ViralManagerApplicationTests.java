@@ -1,3 +1,5 @@
+ /* Copyright © Viral Innovation - All Rights Reserved */
+
 package com.viralinnovation.viralmanager;
 
 import org.junit.jupiter.api.Test;

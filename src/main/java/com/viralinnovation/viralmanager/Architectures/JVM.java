@@ -1,3 +1,5 @@
+ /* Copyright © Viral Innovation - All Rights Reserved */
+
 package com.viralinnovation.viralmanager.Architectures;
 
 import com.viralinnovation.viralmanager.Utils.ViralFileUtils;
