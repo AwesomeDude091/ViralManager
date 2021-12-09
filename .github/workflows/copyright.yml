@@ -11,15 +11,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Add COPYRIGHT
+      run: find "" -type d -name "frontend/node_modules" -prune -o -name "*.js" -print0 | xargs -0 .github/workflows/addcopyright.sh
     # Checking out the repository which is to be actioned
-    - uses: actions/checkout@v2
+    # - uses: actions/checkout@v2
     # Implementing action on repository
-    - uses: VinnyBabuManjaly/copyright-action@v1.0.0
-      with:
-        CopyrightString: 'Copyright (c) 2021 Viral Innovation'
-        FileType: '.java, .txt, .vue'
-        Path: ''
-        IgnorePath: ''
+    # - uses: VinnyBabuManjaly/copyright-action@v1.0.0
+    #  with:
+    #    CopyrightString: 'Copyright (c) 2021 Viral Innovation'
+    #    FileType: '.java, .txt, .vue'
+    #    Path: ''
+    #    IgnorePath: ''
     # Creates pull request with all changes in file
     - name: pull-request-action
       uses: vsoch/pull-request-action@master
@@ -27,5 +29,3 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH_PREFIX: ${GITHUB_REF##*/}
         PULL_REQUEST_BRANCH: "main"
-
-
