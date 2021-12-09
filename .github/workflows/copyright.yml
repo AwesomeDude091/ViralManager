@@ -11,11 +11,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - name: Checkout of Repository
       uses: actions/checkout@v2
-    - name: Add COPYRIGHT
+    - name: Add Copyright
       run: |
-        chmod aw+x "/home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh"
+        chmod a+x "/home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh"
         find "/home/runner/work/ViralManager/ViralManager" -type d -name "/home/runner/work/ViralManager/ViralManager/frontend/node_modules" -prune -o -name "*.js" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh
     # Checking out the repository which is to be actioned
     # - uses: actions/checkout@v2
@@ -27,7 +27,7 @@ jobs:
     #    Path: ''
     #    IgnorePath: ''
     # Creates pull request with all changes in file
-    - name: pull-request-action
+    - name: Create Pull Request 
       uses: vsoch/pull-request-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
