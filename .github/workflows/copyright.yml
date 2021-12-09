@@ -16,8 +16,8 @@ jobs:
     - name: Add Copyright
       run: |
         chmod a+x "/home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh"
-        find "/home/runner/work/ViralManager/ViralManager" -type d -name "frontend/node_modules" -prune -o -name "*.js" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh
-        find "/home/runner/work/ViralManager/ViralManager" -type d -name "src/test" -prune -o -name "*.java" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh
+        find "/home/runner/work/ViralManager/ViralManager" -type d -name "node_modules" -prune -o -name "*.js" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh
+        find "/home/runner/work/ViralManager/ViralManager" -type d -name "test" -prune -o -name "*.java" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh
     # Checking out the repository which is to be actioned
     # - uses: actions/checkout@v2
     # Implementing action on repository
