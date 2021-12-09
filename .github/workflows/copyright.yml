@@ -11,6 +11,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: checkout
+      uses: actions/checkout@v2
     - name: Add COPYRIGHT
       run: find "" -type d -name "frontend/node_modules" -prune -o -name "*.js" -print0 | xargs -0 .github/workflows/addcopyright.sh
     # Checking out the repository which is to be actioned
