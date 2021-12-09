@@ -19,6 +19,8 @@ jobs:
         find "/home/runner/work/ViralManager/ViralManager" -type d -name "node_modules" -prune -o -name "*.js" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh
         find "/home/runner/work/ViralManager/ViralManager" -type d -name "test" -prune -o -name "*.java" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh
         find "/home/runner/work/ViralManager/ViralManager" -type d -name "test" -prune -o -name "*.css" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright.sh
+        find "/home/runner/work/ViralManager/ViralManager" -type d -name "test" -prune -o -name "*.html" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright-html.sh
+        find "/home/runner/work/ViralManager/ViralManager" -type d -name "test" -prune -o -name "*.vue" -print0 | xargs -0 /home/runner/work/ViralManager/ViralManager/.github/workflows/addcopyright-html.sh
     # Checking out the repository which is to be actioned
     # - uses: actions/checkout@v2
     # Implementing action on repository
@@ -41,7 +43,9 @@ jobs:
         # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # BRANCH_PREFIX: ${GITHUB_REF##*/}
         # PULL_REQUEST_BRANCH: "main"
-        reviewers: AwesomeDude091
+        reviewers: |
+          AwesomeDude091
+          Klemen-Z
         draft: false
         labels: |
             copyright
