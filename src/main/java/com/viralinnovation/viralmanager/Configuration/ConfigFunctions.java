@@ -1,5 +1,7 @@
 /* Copyright © Viral Innovation - All Rights Reserved */
 
+/* Copyright © Viral Innovation - All Rights Reserved */
+
 package com.viralinnovation.viralmanager.Configuration;
 
 import org.jetbrains.annotations.Nullable;
