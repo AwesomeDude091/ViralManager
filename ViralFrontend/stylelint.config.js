@@ -1,3 +1,5 @@
+/* Copyright © Viral Innovation - All Rights Reserved */
+
 module.exports = {
   extends: [
     'stylelint-config-standard',

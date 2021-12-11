@@ -1,3 +1,5 @@
+/* Copyright © Viral Innovation - All Rights Reserved */
+
 // Refer to the online docs for more details: https://nightwatchjs.org/gettingstarted/configuration/
 const Services = {}; loadServices()
 

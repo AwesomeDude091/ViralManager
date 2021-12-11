@@ -1,3 +1,5 @@
+<!-- Copyright © Viral Innovation - All Rights Reserved -->
+
 <template>
   <v-app dark>
     <v-navigation-drawer
