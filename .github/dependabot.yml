@@ -9,8 +9,10 @@ updates:
   open-pull-requests-limit: 10
   reviewers:
     - klemen-z
+    - AwesomeDude091
   assignees:
     - klemen-z
+    - AwesomeDude091
   commit-message:
     prefix: fix
     prefix-development: chore
@@ -24,8 +26,10 @@ updates:
   open-pull-requests-limit: 10
   reviewers:
     - klemen-z
+    - AwesomeDude091
   assignees:
     - klemen-z
+    - AwesomeDude091
   commit-message:
     prefix: fix
     prefix-development: chore
