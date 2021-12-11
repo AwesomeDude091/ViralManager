@@ -3,6 +3,7 @@
 package com.viralinnovation.viralmanager.Architectures;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.io.PrintStream;
@@ -23,6 +24,6 @@ public abstract class Architecture {
     public abstract void kill();
     public abstract void runCommand(String command);
     public abstract void setExecutable();
-    public abstract void updateExecutable(Object object);
+    public abstract void updateExecutable(File object, @Nullable String identifer);
 
 }
