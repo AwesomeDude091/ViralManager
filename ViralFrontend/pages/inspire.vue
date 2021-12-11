@@ -1,3 +1,5 @@
+<!-- Copyright © Viral Innovation - All Rights Reserved -->
+
 <template>
   <v-row>
     <v-col class="text-center">

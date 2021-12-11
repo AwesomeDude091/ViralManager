@@ -1,3 +1,5 @@
+/* Copyright © Viral Innovation - All Rights Reserved */
+
 module.exports = {
   commands: [],
   url: 'http://localhost:3000',
