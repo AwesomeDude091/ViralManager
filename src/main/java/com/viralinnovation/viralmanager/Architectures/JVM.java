@@ -73,12 +73,12 @@ public final class JVM extends Architecture {
     }
 
     @Override
-    public void updateExecutable(Object file) {
-        if(file instanceof File){
+    public void updateExecutable(File file, @Nullable String identifer) {
+        if(file != null){
             File oldJar = new File(ViralFileUtils.generateOSBasedClassPath(activeDirectory.getAbsolutePath(), jarFile.getName()));
             try {
                 FileUtils.delete(oldJar);
-                this.jarFile = (File) file;
+                this.jarFile = file;
             } catch (IOException e) {
                 logger.trace(e);
             }
