@@ -7,6 +7,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
+import java.util.List;
 
 public final class ViralFileUtils {
 
@@ -43,18 +44,17 @@ public final class ViralFileUtils {
     
     public static @NotNull String generateOSBasedClassPath(@NotNull String currentPath, List<String> toBeAdded){
         // Adds OS Based divider into Path, iterating through List
-        String returnString = currentPath;
+        StringBuilder returnString = new StringBuilder(currentPath);
         if(currentPath.contains("\\")) {
             for(String string: toBeAdded) {
-                returnString = retrunString + "\\" + string;
+                returnString.append("\\").append(string);
             }
-            return returnString;
         } else {
             for(String string: toBeAdded) {
-                returnString = retrunString + "/" + string;
+                returnString.append("/").append(string);
             }
-            return returnString;
         }
+        return returnString.toString();
     }
 
     public static @Nullable File findJavaDirectory(int javaVersion){
