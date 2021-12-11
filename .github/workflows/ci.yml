@@ -4,11 +4,9 @@ on:
   push:
     branches:
       - main
-      - master
   pull_request:
     branches:
       - main
-      - master
 
 jobs:
   ci:
@@ -19,7 +17,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Setup node env 🏗
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2.5.0
         with:
           node-version: ${{ matrix.node }}
           check-latest: true
@@ -31,7 +29,7 @@ jobs:
           echo "::set-output name=dir::$(yarn cache dir)"
 
       - name: Cache node_modules 📦
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2.1.7
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
@@ -48,8 +46,3 @@ jobs:
         run: |
           cd "/home/runner/work/ViralManager/ViralManager/ViralFrontend" 
           yarn lint
-
-      - name: Run tests 🧪
-        run: |
-          cd "/home/runner/work/ViralManager/ViralManager/ViralFrontend" 
-          yarn test
