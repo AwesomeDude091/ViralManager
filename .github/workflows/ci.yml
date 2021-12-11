@@ -46,8 +46,3 @@ jobs:
         run: |
           cd "/home/runner/work/ViralManager/ViralManager/ViralFrontend" 
           yarn lint
-
-      - name: Run tests 🧪
-        run: |
-          cd "/home/runner/work/ViralManager/ViralManager/ViralFrontend" 
-          yarn test:e2e
