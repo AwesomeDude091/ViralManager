@@ -1,3 +1,5 @@
+/* Copyright © Viral Innovation - All Rights Reserved */
+
 // External Globals doc: https://nightwatchjs.org/guide/#external-globals
 
 module.exports = {
