@@ -1,3 +1,5 @@
+<!-- Copyright © Viral Innovation - All Rights Reserved -->
+
 <template>
   <div class="sidebar">
     <div class="logo-details">
