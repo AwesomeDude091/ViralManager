@@ -35,7 +35,6 @@ public final class Docker extends Architecture {
     @Override
     public void init(PrintStream streamToStreamTo) {
         dockerClient.startContainerCmd("09asdfasdf").exec();
-        dockerClient.container
 
     }
 
