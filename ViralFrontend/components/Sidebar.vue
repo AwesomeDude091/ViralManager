@@ -4,8 +4,8 @@
   <div class="sidebar">
     <div class="logo-details">
       <img class="icon" src="assets/Viral Innovation Logo BIG.png" alt="logo">
-      <div class="logo_name">A-Console</div>
-      <i class='bx bx-menu' id="btn" ></i>
+      <div class="logo_name">Viral Manager</div>
+      <i id="btn" class='bx bx-menu' ></i>
     </div>
     <ul class="nav-list">
       <li>
@@ -65,7 +65,7 @@
             <div class="job">Admin</div>
           </div>
         </div>
-        <i class='bx bx-log-out' id="log_out" ></i>
+        <i id="log_out" class='bx bx-log-out' ></i>
       </li>
     </ul>
   </div>
