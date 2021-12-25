@@ -9,59 +9,59 @@
     </div>
     <ul class="nav-list">
       <li>
-        <a href="#">
+        <NuxtLink to="/">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
-        </a>
+        </NuxtLink>
         <span class="tooltip">Dashboard</span>
       </li>
       <li>
-        <a href="Default-server-Template.html">
+        <NuxtLink to="/endpoints">
           <i class='bx bx-server' ></i>
-          <span class="links_name">Physical Servers</span>
-        </a>
-        <span class="tooltip">Physical Servers</span>
+          <span class="links_name">Endpoints</span>
+        </NuxtLink>
+        <span class="tooltip">Endpoints</span>
       </li>
       <li>
-        <a href="Default-virtual-Template.html">
+        <NuxtLink to="/services">
           <i class='bx bx-cloud' ></i>
-          <span class="links_name">Virtual Servers</span>
-        </a>
-        <span class="tooltip">Virtual Servers</span>
+          <span class="links_name">Services</span>
+        </NuxtLink>
+        <span class="tooltip">Services</span>
       </li>
       <li>
-        <a href="#">
+        <NuxtLink to="/analytics">
           <i class='bx bx-pie-chart-alt-2' ></i>
           <span class="links_name">Analytics</span>
-        </a>
+        </NuxtLink>
         <span class="tooltip">Analytics</span>
       </li>
       <li>
-        <a href="#">
+        <NuxtLink to="/addons">
           <i class='bx bx-plug' ></i>
-          <span class="links_name">Plugins</span>
-        </a>
-        <span class="tooltip">Plugins</span>
+          <span class="links_name">Addons</span>
+        </NuxtLink>
+        <span class="tooltip">Addons</span>
       </li>
       <li>
-        <a href="#">
+        <NuxtLink to="/user-settings">
           <i class='bx bx-user' ></i>
           <span class="links_name">User Settings</span>
-        </a>
+        </NuxtLink>
         <span class="tooltip">User Settings</span>
       </li>
       <li>
-        <a href="#">
+        <NuxtLink to="/settings">
           <i class='bx bx-cog' ></i>
           <span class="links_name">Settings</span>
-        </a>
+        </NuxtLink>
         <span class="tooltip">Settings</span>
       </li>
       <li class="profile">
         <div class="profile-details">
           <img src="assets/placeholder.jpeg" alt="profileImg">
           <div class="name_job">
-            <div class="name">AwesomeDude</div>
+            <div class="name">Klembit</div>
             <div class="job">Admin</div>
           </div>
         </div>
