@@ -126,6 +126,7 @@ export default {
     display: flex;
     align-items: center;
     position: relative;
+    top: 10px;
   }
   .sidebar .logo-details .logo_name{
     color: #fff;
