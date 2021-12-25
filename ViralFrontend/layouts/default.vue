@@ -1,6 +1,9 @@
 <!-- Copyright © Viral Innovation - All Rights Reserved -->
 
 <template>
-  <Nuxt />
+  <div>
+    <Sidebar />
+    <Nuxt />
+  </div>
 </template>
 
