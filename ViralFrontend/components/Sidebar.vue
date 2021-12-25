@@ -1,11 +1,10 @@
 <!-- Copyright © Viral Innovation - All Rights Reserved -->
 
 <template>
-  <div class="sidebar">
+  <div class="sidebar" :class="{'open': !menuClose}">
     <div class="logo-details">
-      <img class="icon" src="assets/Viral Innovation Logo BIG.png" alt="logo">
       <div class="logo_name">Viral Manager</div>
-      <i id="btn" class='bx bx-menu' ></i>
+      <i id="btn" class="bx" :class="{'bx-menu' : menuClose, 'bx-menu-alt-right' : !menuClose}" @click="menuButtonChange" ></i>
     </div>
     <ul class="nav-list">
       <li>
@@ -59,13 +58,15 @@
       </li>
       <li class="profile">
         <div class="profile-details">
-          <img src="assets/placeholder.jpeg" alt="profileImg">
+          <img src="@/assets/placeholder.jpeg" alt="profileImg">
           <div class="name_job">
             <div class="name">Klembit</div>
             <div class="job">Admin</div>
           </div>
         </div>
-        <i id="log_out" class='bx bx-log-out' ></i>
+        <NuxtLink to="/login">
+          <i id="log_out" class='bx bx-log-out' ></i>
+        </NuxtLink>
       </li>
     </ul>
   </div>
@@ -73,6 +74,11 @@
 <script>
 export default {
   name: "Sidebar",
+  data() {
+    return {
+      menuClose: true,
+    };
+  },
   head: {
     title: 'Viral Manager',
     meta: [
@@ -83,73 +89,9 @@ export default {
       {rel: 'stylesheet', href: 'https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'}
     ]
   },
-  mounted() {
-    'use strict'
-    const sidebar = document.querySelector('.sidebar')
-    const closeBtn = document.querySelector('#btn')
-    const allTabs = document.getElementsByClassName('tab')
-    const allContent = document.getElementsByClassName('actual-content')
-
-// following are the code to change sidebar button(optional)
-    function menuBtnChange () {
-      if (sidebar.classList.contains('open')) {
-        closeBtn.classList.replace('bx-menu', 'bx-menu-alt-right') // replacing the icons class
-      } else {
-        closeBtn.classList.replace('bx-menu-alt-right', 'bx-menu') // replacing the icons class
-      }
-    }
-
-    function tabChange (element) {
-      let elementID = -1
-      for (let i = 0; i < allTabs.length; i++) {
-        if (allTabs[i] === element) {
-          elementID = i
-          break
-        }
-      }
-
-      if (elementID === -1) {
-        return
-      }
-
-      for (let k = 0; k < allTabs.length; k++) {
-        if (allTabs[k].classList.contains('active-tab')) {
-          if (k === elementID) {
-            return
-          }
-        }
-      }
-
-      for (let j = 0; j < allTabs.length; j++) {
-        if (allTabs[j].classList.contains('active-tab')) {
-          allTabs[j].classList.replace('active-tab', 'inactive-tab')
-          allContent[j].classList.replace('active-content', 'inactive-content')
-        } else if (j === elementID) {
-          allTabs[j].classList.replace('inactive-tab', 'active-tab')
-          allContent[j].classList.replace('inactive-content', 'active-content')
-        }
-      }
-    }
-
-    function assignListener (element) {
-      element.addEventListener('click', () => {
-        tabChange(element)
-      })
-    }
-
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.toggle('open')
-      menuBtnChange() // calling the function(optional)
-    })
-
-    allTabs[0].classList.add('active-tab')
-    allContent[0].classList.add('active-content')
-    assignListener(allTabs[0])
-
-    for (let i = 1; i < allTabs.length; i++) {
-      allTabs[i].classList.add('inactive-tab')
-      allContent[i].classList.add('inactive-content')
-      assignListener(allTabs[i])
+  methods: {
+    menuButtonChange() {
+      this.menuClose = !this.menuClose;
     }
   }
 }
@@ -176,7 +118,7 @@ export default {
     z-index: 99;
     transition: all 0.5s ease;
   }
-  .sidebar .open{
+  .sidebar.open{
     width: 250px;
   }
   .sidebar .logo-details{
@@ -185,20 +127,14 @@ export default {
     align-items: center;
     position: relative;
   }
-  .sidebar .logo-details .icon{
-    opacity: 0;
-    transition: all 0.5s ease;
-    height: 50px;
-    width: 50px;
-  }
   .sidebar .logo-details .logo_name{
     color: #fff;
     font-size: 20px;
     font-weight: 600;
     opacity: 0;
+    padding-left:20px;
     transition: all 0.5s ease;
   }
-  .sidebar.open .logo-details .icon,
   .sidebar.open .logo-details .logo_name{
     opacity: 1;
   }
@@ -214,6 +150,7 @@ export default {
   }
   .sidebar.open .logo-details #btn{
     text-align: right;
+    right: 10px;
   }
   .sidebar i{
     color: #fff;
@@ -287,7 +224,7 @@ export default {
   .sidebar li a:hover{
     background: #FFF;
   }
-  .sidebar li a .links_name{
+  .sidebar .links_name{
     color: #fff;
     font-size: 15px;
     font-weight: 400;
@@ -296,7 +233,7 @@ export default {
     pointer-events: none;
     transition: 0.4s;
   }
-  .sidebar.open li a .links_name{
+  .sidebar.open .links_name{
     opacity: 1;
     pointer-events: auto;
   }
